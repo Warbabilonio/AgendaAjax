@@ -2,13 +2,17 @@
 
 :root {
     --primario: #c2185b;
+    --primarioOscuro: rgb(156,10,69);
     --secundario: #ffc107;
+    --fuentePrimaria: 'Arial', Helvetica, sans-serif;
+    --fuenteSecundaria: 'Poppins', sans-serif;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
     box-sizing: border-box;
+    font-family: var(--fuentePrimaria);
 }
 
 *, *:before, *:after {
@@ -19,6 +23,113 @@ body {
     background-color: var(--primario);
 }
 
-.bg-amarilo{
+.bg-amarillo {
+    background-color: var(--secundario);
+}
+
+.sombra {
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2{
+    font-family: var(--fuenteSecundaria);
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    padding: 20px;
+    color: white;
+}
+
+.contenedor-barra{
+    background-color: var(--primarioOscuro);
+}
+
+/** Formulario **/
+form{
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+form legend{
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+}
+
+legend span{
+font-size: 1rem;
+margin-top: 1rem;
+/* CON CLEAR Y DISPLAY SE HACE EL BR*/
+clear: both;
+display: block;
+
+}
+
+@media(min-width: 768px) {
+    .campos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
     
+    .campo {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.campo {
+    padding: .5rem 0;
+}
+
+.campo label{
+    font-size: 1.2rem;
+}
+
+.campo input[type="text"],
+.campo input[type="tel"]{
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    height: 3rem;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.campo input[type="submit"]{
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    padding: 1rem 4rem;
+    text-transform: uppercase; 
+    font-size: 1.2rem;
+    transition: background-color .5s ease-in-out;
+    flex: 1;
+   
+}
+
+.campo input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--primarioOscuro);
+}
+
+@media(min-width: 768px) {
+    .campo input[type="submit"]{
+    flex: 0 0 auto;
+    }
 }

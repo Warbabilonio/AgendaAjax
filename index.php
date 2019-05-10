@@ -20,9 +20,10 @@
                 <label for="telefono">Telefono:</label>
                 <input type="tel" placeholder="000000" id="telefono">
             </div>
-            <div class="campo enviar">
-                <input type="submit" value="Añadir">
-            </div>
+
+        </div>
+        <div class="campo enviar">
+            <input type="submit" value="Añadir">
         </div>
     </form>
 </div>
