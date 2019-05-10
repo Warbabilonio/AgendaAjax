@@ -2,7 +2,7 @@
 
 :root {
     --primario: #c2185b;
-    --primarioOscuro: rgb(156,10,69);
+    --primarioOscuro: rgb(156, 10, 69);
     --secundario: #ffc107;
     --fuentePrimaria: 'Arial', Helvetica, sans-serif;
     --fuenteSecundaria: 'Poppins', sans-serif;
@@ -27,6 +27,10 @@ body {
     background-color: var(--secundario);
 }
 
+.bg-blanco {
+    background-color: white;
+}
+
 .sombra {
     border-radius: 10px;
     -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
@@ -39,7 +43,7 @@ body {
     margin: 0 auto;
 }
 
-h1, h2{
+h1, h2 {
     font-family: var(--fuenteSecundaria);
     text-align: center;
     margin: 0;
@@ -50,39 +54,43 @@ h1 {
     color: white;
 }
 
-.contenedor-barra{
+h2 {
+    font-size: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-barra {
     background-color: var(--primarioOscuro);
 }
 
 /** Formulario **/
-form{
+
+form {
     padding: 3rem;
     margin-top: 3rem;
 }
 
-form legend{
+form legend {
     font-family: var(--fuenteSecundaria);
     font-size: 2rem;
     display: block;
     text-align: center;
 }
 
-legend span{
-font-size: 1rem;
-margin-top: 1rem;
-/* CON CLEAR Y DISPLAY SE HACE EL BR*/
-clear: both;
-display: block;
-
+legend span {
+    font-size: 1rem;
+    margin-top: 1rem;
+    /* CON CLEAR Y DISPLAY SE HACE EL BR*/
+    clear: both;
+    display: block;
 }
 
 @media(min-width: 768px) {
-    .campos{
+    .campos {
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
     }
-    
     .campo {
         flex: 0 0 calc(33.3% - 1rem);
     }
@@ -92,12 +100,11 @@ display: block;
     padding: .5rem 0;
 }
 
-.campo label{
+.campo label {
     font-size: 1.2rem;
 }
 
-.campo input[type="text"],
-.campo input[type="tel"]{
+.campo input[type="text"], .campo input[type="tel"] {
     width: 100%;
     border: none;
     padding: .5rem;
@@ -106,30 +113,108 @@ display: block;
     font-size: 1.2rem;
 }
 
-.enviar{
+.enviar {
     display: flex;
     justify-content: flex-end;
 }
 
-.campo input[type="submit"]{
+.campo input[type="submit"] {
     background-color: var(--primario);
     color: white;
     border: none;
     padding: 1rem 4rem;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     font-size: 1.2rem;
     transition: background-color .5s ease-in-out;
     flex: 1;
-   
 }
 
-.campo input[type="submit"]:hover{
+.campo input[type="submit"]:hover {
     cursor: pointer;
     background-color: var(--primarioOscuro);
 }
 
 @media(min-width: 768px) {
-    .campo input[type="submit"]{
-    flex: 0 0 auto;
+    .campo input[type="submit"] {
+        flex: 0 0 auto;
     }
+}
+
+/** Listado de contaactos**/
+
+.contactos {
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.total-contactos{
+    font-family: var(--fuenteSecundaria);
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--primario);
+    font-size: 2rem;
+}
+
+.total-contactos span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+
+.contenedor-tabla{
+    overflow: scroll;/**Añade Scroll*/
+}
+.contenedor-contactos {
+    max-width: 1000px;
+    margin: 4rem auto 0 auto;
+}
+
+.buscador {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    margin: 2rem 0;
+}
+
+.listado-contactos {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+}
+
+.listado-contactos thead {
+    background-color: var(--primario);
+    color: white;
+    text-transform: uppercase;
+}
+
+.listado-contactos thead th {
+    padding: 1rem 0;
+}
+
+.listado-contactos tbody td {
+    padding: .5rem;
+}
+
+.listado-contactos button {
+    background-color: transparent!important;
+    border: none;
+}
+
+.btn {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.btn-editar {
+    color: var(--secundario);
+}
+
+.btn-borrar {
+    color: var(--primario);
+}
+
+.listado-contactos tbody td:nth-child(4){
+text-align: center;
 }
