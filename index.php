@@ -7,24 +7,7 @@
 <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
         <legend>Añada un contacto <span>Todos los campos son obligatorios</span></legend>
-        <div class="campos">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" placeholder="Nombre Contacto" id="nombre">
-            </div>
-            <div class="campo">
-                <label for="empresa">Empresa:</label>
-                <input type="text" placeholder="Empresa" id="empresa">
-            </div>
-            <div class="campo">
-                <label for="telefono">Telefono:</label>
-                <input type="tel" placeholder="000000" id="telefono">
-            </div>
-
-        </div>
-        <div class="campo enviar">
-            <input type="submit" value="Añadir">
-        </div>
+        <?php include 'inc/layout/formulario.php' ?>
     </form>
 </div>
 
@@ -48,7 +31,7 @@
                         <td>Serikat</td>
                         <td>6846546</td>
                         <td>
-                            <a href="#" class="btn-editar btn">
+                            <a href="editar.php?id=1" class="btn-editar btn">
                                 <i class="fas fa-pen-square"></i>
                             </a>
                             <button data-id="1" type="button" class="btn-borrar btn">

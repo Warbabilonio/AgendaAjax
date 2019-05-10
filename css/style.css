@@ -31,6 +31,35 @@ body {
     background-color: white;
 }
 
+.barra{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+/* BOTONES */
+.btn {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.btn-editar {
+    color: var(--secundario);
+}
+
+.btn-borrar {
+    color: var(--primario);
+}
+
+.volver{
+    background-color: var(--secundario);
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
 .sombra {
     border-radius: 10px;
     -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
@@ -202,18 +231,7 @@ legend span {
     border: none;
 }
 
-.btn {
-    font-size: 2rem;
-    text-decoration: none;
-}
 
-.btn-editar {
-    color: var(--secundario);
-}
-
-.btn-borrar {
-    color: var(--primario);
-}
 
 .listado-contactos tbody td:nth-child(4){
 text-align: center;
