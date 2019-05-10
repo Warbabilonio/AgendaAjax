@@ -31,12 +31,14 @@ body {
     background-color: white;
 }
 
-.barra{
+.barra {
     display: grid;
     grid-template-columns: 100px 1fr;
     align-items: center;
 }
+
 /* BOTONES */
+
 .btn {
     font-size: 2rem;
     text-decoration: none;
@@ -50,7 +52,7 @@ body {
     color: var(--primario);
 }
 
-.volver{
+.volver {
     background-color: var(--secundario);
     border-radius: 5px;
     text-align: center;
@@ -68,7 +70,7 @@ body {
 }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -176,7 +178,7 @@ legend span {
     margin-top: 3rem;
 }
 
-.total-contactos{
+.total-contactos {
     font-family: var(--fuenteSecundaria);
     margin: 2rem 0;
     text-align: center;
@@ -184,17 +186,18 @@ legend span {
     font-size: 2rem;
 }
 
-.total-contactos span{
+.total-contactos span {
     font-size: 3rem;
     font-weight: 900;
 }
 
-
-.contenedor-tabla{
-    overflow: scroll;/**Añade Scroll*/
+.contenedor-tabla {
+    overflow: scroll;
+    /**Añade Scroll*/
 }
+
 .contenedor-contactos {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 4rem auto 0 auto;
 }
 
@@ -231,8 +234,33 @@ legend span {
     border: none;
 }
 
+.listado-contactos tbody td:nth-child(4) {
+    text-align: center;
+}
 
+/** Notificacion **/
 
-.listado-contactos tbody td:nth-child(4){
-text-align: center;
+.notificacion {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 3rem;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/*/ colores de la notificacion/*/
+
+.correcto{
+background-color: rgb(179,241,177);
+color: green;
+}
+
+.error{
+    background-color: rgb(238,148,166);
+    color: rgb(163, 0, 33);
 }
