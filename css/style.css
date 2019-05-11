@@ -190,12 +190,12 @@ legend span {
     font-size: 3rem;
     font-weight: 900;
 }
-
+/*
 .contenedor-tabla {
     overflow: scroll;
-    /**Añade Scroll*/
+    /**Añade Scroll
 }
-
+*/
 .contenedor-contactos {
     max-width: 800px;
     margin: 4rem auto 0 auto;

@@ -67,7 +67,7 @@ function insertarBD(infoContacto) {
             const contenedorAcciones = document.createElement('td');
             //crear el icono de editar
             const iconoEditar = document.createElement('i');
-            iconoEditar.classList.add('fas', 'fas-pen-square');
+            iconoEditar.classList.add('fas', 'fa-pen-square');
 
             //crear el enlace para editar
             const btnEditar = document.createElement('a');
@@ -80,7 +80,7 @@ function insertarBD(infoContacto) {
 
             //crear el icono eliminar
             const iconoEliminar = document.createElement('i');
-            iconoEliminar.classList.add('fas', 'fas-trash-square');
+            iconoEliminar.classList.add('fas', 'fa-trash-alt');
 
             //crear el boton eliminar
             const btnEliminar = document.createElement('button');
