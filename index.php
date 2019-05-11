@@ -41,7 +41,7 @@ include 'inc/funciones/funciones.php';
                                     <a href="editar.php?id=<?php echo $contacto['id']; ?>" class="btn-editar btn">
                                         <i class="fas fa-pen-square"></i>
                                     </a>
-                                    <button data-id="1" type="button" class="btn-borrar btn">
+                                    <button data-id="<?php echo $contacto['id']; ?>" type="button" class="btn-borrar btn">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                 </td>
